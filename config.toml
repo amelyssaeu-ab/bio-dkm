@@ -1,0 +1,6 @@
+[theme]
+primaryColor = "#363A13"            # Oliva/Castanho escuro das bordas
+backgroundColor = "#FFFFFF"         # Fundo principal branco
+secondaryBackgroundColor = "#E6E2BD" # Bege/Amarelo suave de preenchimento (Barra lateral / Caixas)
+textColor = "#363A13"               # Texto em tom escuro contrastante
+font = "sans serif"
