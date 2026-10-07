@@ -26,9 +26,9 @@ O arquivo [`tarefa13.ipynb`](tarefa13_Python_Ciencias_Biologicas.ipynb) está or
 2. **Pesquisa teórica e gráficos de densidade:** apresentação das fórmulas das densidades (PDF), parâmetros, definições, limitações de aplicação e sensibilidade visual variando parâmetros em Python para:
    - **Distribuição Normal:** modelagem de medidas contínuas individuais (comprimento de pétalas de *Iris-setosa*).
    - **Distribuição t de Student:** modelagem de estatísticas de médias amostrais padronizadas (teste de hipótese para *Iris-versicolor*).
-   - **Distribuição qui-quadrado ($\chi^2$):** modelagem da variância amostral ($S^2$).
+   - **Distribuição qui-quadrado ($\chi^2$):** modelagem da variância amostral.
    - **Distribuição F de Fisher:** modelagem da razão de variâncias entre duas populações (*Iris-versicolor* vs. *Iris-setosa*).
-3. **Probabilidades e Percentis em Python:** cálculos de probabilidades acumuladas ($P(X \le x)$), intervalos ($P(a \le X \le b)$), cauda superior ($P(X > x)$) e percentis via `scipy.stats`, acompanhados de gráficos com áreas sob a curva sombreadas.
+3. **Probabilidades e Percentis em Python:** cálculos de probabilidades acumuladas, intervalos, cauda superior e percentis via `scipy.stats`, acompanhados de gráficos com áreas sob a curva sombreadas.
 4. **Discussão e Conclusões:** análise crítica sobre as condições necessárias para aplicação das distribuições, distinção entre dados observados e estatísticas modeladas e limitações da base amostral.
 
 ## Dados utilizados
@@ -57,7 +57,7 @@ Os dados vêm do repositório público **UCI Machine Learning Repository**, base
 git clone [https://github.com/amelyssaeu-ab/bio-dkm.git](https://github.com/amelyssaeu-ab/bio-dkm.git)
 cd bio-dkm
 pip install numpy pandas matplotlib seaborn scipy jupyter
-jupyter notebook tarefa13_Python_Ciencias_Biologicas.ipynb
+jupyter notebook tarefa13.ipynb
 ```
 
 **Bibliotecas:** `numpy`, `pandas`, `matplotlib`, `seaborn` e `scipy`.
