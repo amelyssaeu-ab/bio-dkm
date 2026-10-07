@@ -1,10 +1,10 @@
-# Tarefa 13 — Normal, t de Student, qui-Quadrado e f de Fisher 
+# Tarefa 13 — Normal, t de Student, qui-Quadrado e F de Fisher
 
 Repositório pertencente ao grupo.
 
-Este repositório reúne o notebook da **Tarefa 11** de Bioestatística, que apresenta os conceitos de variável aleatória e os modelos de **Bernoulli**, **Binomial** e **Poisson**, aplicados a dados reais da tartaruga-verde (*Chelonia mydas*) no Brasil.
+Este repositório reúne o notebook da **Tarefa 13** de Bioestatística, que apresenta a investigação de distribuições contínuas de probabilidade (**Normal**, **t de Student**, **qui-quadrado** e **F de Fisher**) aplicadas a dados morfológicos reais da flor de *Iris* (*Iris spp.*).
 
-[![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/amelyssaeu-ab/bio-dkm/blob/main/Tarefa011_completa.ipynb)
+[![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/amelyssaeu-ab/bio-dkm/blob/main/tarefa13_Python_Ciencias_Biologicas.ipynb)
 
 ## Integrantes
 
@@ -16,36 +16,36 @@ Este repositório reúne o notebook da **Tarefa 11** de Bioestatística, que apr
 
 ## Objetivo
 
-Mostrar, com exemplos biológicos e código em Python, o que é uma variável aleatória e como escolher entre os modelos de Bernoulli, Binomial e Poisson conforme o tipo de fenômeno observado.
+Investigar como as distribuições Normal, t de Student, qui-quadrado e F de Fisher ajudam a responder perguntas biológicas reais, distinguindo medidas biológicas de organismos individuais de estatísticas amostrais modeladas, apresentando as equações teóricas, análises de sensibilidade de parâmetros, gráficos com áreas sombreadas e cálculos de probabilidades acumuladas, pontuais e percentis em Python.
 
 ## Conteúdo do notebook
 
-O arquivo [`Tarefa011_completa.ipynb`](Tarefa011_completa.ipynb) está organizado em seis tópicos:
+O arquivo [`tarefa13_Python_Ciencias_Biologicas.ipynb`](tarefa13_Python_Ciencias_Biologicas.ipynb) está organizado em quatro tópicos principais:
 
-1. **Variável aleatória:** definição e exemplos.
-2. **Variáveis aleatórias discretas e contínuas:** diferenças e exemplos biológicos.
-3. **Modelo de Bernoulli:** um único ensaio com dois desfechos. Exemplo: uma tartaruga-verde apresenta ou não fibropapilomatose, com `p = 0,1541`.
-4. **Modelo Binomial:** número de sucessos em `n` ensaios independentes. Exemplo: amostra de 20 tartarugas, com discussão sobre a adequação das suposições ao cenário biológico.
-5. **Modelo de Poisson:** contagem de eventos por unidade de observação. Exemplo: desovas por noite na Ilha da Trindade, no Atol das Rocas e em Fernando de Noronha, com distribuição teórica, simulação de uma temporada, mudança da unidade de observação e discussão das suposições do modelo.
-6. **Comparação entre Bernoulli, Binomial e Poisson:** tabela comparativa, gráficos lado a lado, verificação de médias e variâncias e relações entre os modelos (Binomial como soma de Bernoullis e aproximação da Binomial pela Poisson).
+1. **Escolha da base de dados e contextualização:** descrição da base *Iris*, identificação das variáveis morfológicas, unidade experimental e formulação da pergunta biológica orientadora.
+2. **Pesquisa teórica e gráficos de densidade:** apresentação das fórmulas das densidades (PDF), parâmetros, definições, limitações de aplicação e sensibilidade visual variando parâmetros em Python para:
+   - **Distribuição Normal:** modelagem de medidas contínuas individuais (comprimento de pétalas de *Iris-setosa*).
+   - **Distribuição t de Student:** modelagem de estatísticas de médias amostrais padronizadas (teste de hipótese para *Iris-versicolor*).
+   - **Distribuição qui-quadrado ($\chi^2$):** modelagem da variância amostral ($S^2$).
+   - **Distribuição F de Fisher:** modelagem da razão de variâncias entre duas populações (*Iris-versicolor* vs. *Iris-setosa*).
+3. **Probabilidades e Percentis em Python:** cálculos de probabilidades acumuladas ($P(X \le x)$), intervalos ($P(a \le X \le b)$), cauda superior ($P(X > x)$) e percentis via `scipy.stats`, acompanhados de gráficos com áreas sob a curva sombreadas.
+4. **Discussão e Conclusões:** análise crítica sobre as condições necessárias para aplicação das distribuições, distinção entre dados observados e estatísticas modeladas e limitações da base amostral.
 
 ## Dados utilizados
 
-Os dados vêm do artigo de Almeida *et al.* (2011), que por sua vez cita o Banco de Dados TAMAR/SITAMAR como fonte original.
+Os dados vêm do repositório público **UCI Machine Learning Repository**, base clássica criada por R. A. Fisher (1936).
 
-| Local | Temporada | Desovas registradas |
+| Variável | Descrição | Unidade |
 |---|---|---|
-| Ilha da Trindade (ES) | 2008/2009 | 2.961 |
-| Atol das Rocas (RN) | 2007/2008 | 474 |
-| Fernando de Noronha (PE) | 2008/2009 | 55 |
+| `sepal_length` | Comprimento da sépala | cm |
+| `sepal_width` | Largura da sépala | cm |
+| `petal_length` | Comprimento da pétala | cm |
+| `petal_width` | Largura da pétala | cm |
+| `species` | Espécie (*Iris-setosa*, *Iris-versicolor*, *Iris-virginica*) | Categórica (50 indivíduos/espécie) |
 
-Também foi usada a proporção de **15,41%** de indivíduos com fibropapilomatose entre os **8.359** examinados.
-
-**Suposições do grupo (não são dados do artigo):**
-
-- A temporada reprodutiva tem **182 noites** (de 1º de dezembro a 31 de maio).
-- A amostra de **n = 20 tartarugas** é hipotética e serve apenas para ilustrar o modelo Binomial.
-- As contagens noite a noite das seções de simulação são **dados simulados**, pois o artigo traz apenas o total por temporada.
+- **Instituição responsável:** UCI Machine Learning Repository / Yale University.
+- **Data de Acesso:** 07 de Outubro de 2026.
+- **Total de observações:** 150 plantas (50 por espécie), sem dados ausentes.
 
 ## Como executar
 
@@ -54,16 +54,20 @@ Também foi usada a proporção de **15,41%** de indivíduos com fibropapilomato
 **Localmente:**
 
 ```bash
-git clone https://github.com/amelyssaeu-ab/bio-dkm.git
+git clone [https://github.com/amelyssaeu-ab/bio-dkm.git](https://github.com/amelyssaeu-ab/bio-dkm.git)
 cd bio-dkm
 pip install numpy pandas matplotlib seaborn scipy jupyter
-jupyter notebook Tarefa011_completa.ipynb
+jupyter notebook tarefa13_Python_Ciencias_Biologicas.ipynb
 ```
 
 **Bibliotecas:** `numpy`, `pandas`, `matplotlib`, `seaborn` e `scipy`.
 
 ## Referências
 
-ALMEIDA, A. P. *et al.* Avaliação do estado de conservação da tartaruga marinha *Chelonia mydas* (Linnaeus, 1758) no Brasil. **Biodiversidade Brasileira**, Brasília, ano 1, n. 1, p. 12-19, 2011. Acesso em: 29 set. 2026.
+BUSSAB, Wilton de O.; MORETTIN, Pedro A. Estatística básica. 9. ed. São Paulo: Saraiva, 2017.
 
-MEYER, Paul L. **Probabilidade**: aplicações à estatística. 2. ed. Rio de Janeiro: LTC, 2000.
+FISHER, Ronald A. The use of multiple measurements in taxonomic problems. Annals of Eugenics, London, v. 7, n. 2, p. 179-188, 1936.
+
+SCIPY COMMUNITY. SciPy User Guide: scipy.stats (norm, t, chi2, f). Disponível em: https://docs.scipy.org/doc/scipy/reference/stats.html. Acesso em: 07 out. 2026.
+
+UCI MACHINE LEARNING REPOSITORY. Iris Dataset. Irvine: University of California, School of Information and Computer Science, 1988. Disponível em: https://archive.ics.uci.edu/ml/datasets/iris. Acesso em: 07 out. 2026.
