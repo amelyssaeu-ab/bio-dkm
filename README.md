@@ -1,4 +1,4 @@
-# Tarefa 11 — Variáveis Aleatórias na Biologia
+# Tarefa 13 — Normal, t de Student, qui-Quadrado e f de Fisher 
 
 Repositório pertencente ao grupo.
 
