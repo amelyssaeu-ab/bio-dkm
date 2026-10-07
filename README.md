@@ -44,7 +44,7 @@ Os dados vêm do repositório público **UCI Machine Learning Repository**, base
 | `species` | Espécie (*Iris-setosa*, *Iris-versicolor*, *Iris-virginica*) | Categórica (50 indivíduos/espécie) |
 
 - **Instituição responsável:** UCI Machine Learning Repository / Yale University.
-- **Data de Acesso:** 07 de Outubro de 2026.
+- **Data de Acesso:** 06 de Outubro de 2026.
 - **Total de observações:** 150 plantas (50 por espécie), sem dados ausentes.
 
 ## Como executar
