@@ -20,7 +20,7 @@ Investigar como as distribuições Normal, t de Student, qui-quadrado e F de Fis
 
 ## Conteúdo do notebook
 
-O arquivo [`tarefa13_Python_Ciencias_Biologicas.ipynb`](tarefa13_Python_Ciencias_Biologicas.ipynb) está organizado em quatro tópicos principais:
+O arquivo [`tarefa13.ipynb`](tarefa13_Python_Ciencias_Biologicas.ipynb) está organizado em quatro tópicos principais:
 
 1. **Escolha da base de dados e contextualização:** descrição da base *Iris*, identificação das variáveis morfológicas, unidade experimental e formulação da pergunta biológica orientadora.
 2. **Pesquisa teórica e gráficos de densidade:** apresentação das fórmulas das densidades (PDF), parâmetros, definições, limitações de aplicação e sensibilidade visual variando parâmetros em Python para:
